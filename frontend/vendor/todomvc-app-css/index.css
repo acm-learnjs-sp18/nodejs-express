@@ -70,7 +70,8 @@ body {
 .todoapp h1 {
 	position: absolute;
 	top: -155px;
-	width: 100%;
+	left: -50%;
+	width: 200%;
 	font-size: 100px;
 	font-weight: 100;
 	text-align: center;

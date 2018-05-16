@@ -5,6 +5,8 @@ This is based on https://github.com/tastejs/todomvc/tree/gh-pages/examples/react
 Differences:
 
 - The store method is asynchronous
+- Todos are read from/written to a server, which is written using [express.js](http://expressjs.com/)
+- Data is persisted using [json-store](https://github.com/juliangruber/json-store)
 
 ## Running
 
