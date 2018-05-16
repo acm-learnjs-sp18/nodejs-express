@@ -1,0 +1,9 @@
+{
+  "name": "todomvc-express",
+  "dependencies": {
+    "serve": "^6.5.7"
+  },
+  "scripts": {
+    "start": "serve"
+  }
+}
