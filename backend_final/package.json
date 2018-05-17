@@ -1,0 +1,14 @@
+{
+  "name": "todomvc-express",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "json-store": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "random-string": "^0.2.0"
+  },
+  "scripts": {
+    "prestart": "mkdirp .data",
+    "start": "node backend/server"
+  }
+}

@@ -31,7 +31,7 @@ app.get('/todos', (req, res) => {
 app.post('/todos', bodyParser.json(), (req, res) => {
   const listId = getListId(req)
   store.set(listId, req.body)
-  res.status(201).json(store.get(listId))
+  res.end()
 })
 
 // serve static HTML, CSS & JavaScript when a path is set.
