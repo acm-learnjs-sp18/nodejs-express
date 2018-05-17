@@ -7,17 +7,23 @@ var app = window.app || {};
     },
 
     async store (data) {
-      if (data) {
-        return window.fetch('/todos/', {
-          method: 'post',
-          body: JSON.stringify(data),
-          headers: {
-            'content-type': 'application/json;charset=UTF-8'
-          }
-        })
-      }
+      try {
+        if (data) {
+          return window.fetch('/todos/', {
+            method: 'post',
+            body: JSON.stringify(data),
+            headers: {
+              'content-type': 'application/json;charset=UTF-8'
+            }
+          })
+        }
 
-      return window.fetch('/todos/').then(response => response.json())
+        const response = await window.fetch('/todos/')
+        const json = await response.json()
+        return json
+      } catch (error) {
+        return []
+      }
     }
   }
 })()
